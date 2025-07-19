@@ -1,0 +1,1730 @@
+/* General Styles(main body) */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafa; /* Light off-white */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 85%; /* Slightly wider container */
+    margin-top: 80px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #2e3138; /* Dark blue-gray */
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #000000; /* Teal */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2c4545; /* Darker teal */
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #525458, #505766); /* Deeper blue-gray gradient */
+    color: #fff;
+    padding: 25px 0; /* Increased padding for more height */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0; /* Start from the left edge */
+    width: 100%; /* Cover the entire width */
+    z-index: 100; /* Ensure it stays on top of other elements */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo a {
+    font-size: 28px; /* Slightly larger logo */
+    font-weight: 700;
+    color: #fff; /* Light logo text */
+}
+
+header .logo span {
+    color: #80deea; /* Light blue accent */
+}
+
+/*--------------------------------------------------------------------------------*/
+.nav-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.auth-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links ul li,
+.auth-links ul li {
+    margin-left: 30px; /* Further increased spacing */
+}
+
+.nav-links ul li a,
+.auth-links ul li a {
+    padding: 10px 15px; /* Larger padding for buttons */
+    color: #bbedf6; /* Light link color */
+    border-radius: 7px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links ul li a:hover,
+.auth-links ul li a:hover {
+    background-color: rgba(82, 145, 123, 0.2); /* White with transparency */
+    color: #5c6e6f; /* Lighter blue */
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(to right, rgba(0, 128, 128, 0.1), rgba(46, 139, 87, 0.1)), /* Teal & Green gradient with opacity */
+                url('assets/hero-bg.jpg') no-repeat center/cover;
+    color: #2e3138;
+    text-align: center;
+    padding: 120px 0;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content {
+    width: 80%;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    animation: slideInLeft 1s ease forwards;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.hero p {
+    font-size: 1.3em;
+    animation: slideInRight 1s ease forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*call-to-action button (.cta-button) — a button meant to grab user attention*/
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #008080; /* Teal */
+    color: #fff;
+    border-radius: 7px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color:  #36bdcf;;
+    transform: scale(1.05);
+}
+
+/*-------------------------------------------------------------------------------*/
+/* About Section Styles */
+.about {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-cards .card {
+    width: 30%;
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.about-cards .card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.about-cards .card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.about-cards .card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.about-cards .card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.about-cards .card h3 {
+    margin-bottom: 12px;
+}
+
+.about-cards .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: #e0f2f1; /* Light teal background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 40px;
+    color: #2e3138;
+}
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.testimonial {
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #444;
+}
+
+.testimonial-author {
+    font-style: italic;
+    margin-top: 18px;
+    color: #666;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* FAQ Accordion Styles */
+.faq {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 18px;
+    border: 1px solid #d0d0d0;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+button[aria-expanded='false'] .icon {
+    transform: rotate(0deg);
+}
+
+button[aria-expanded='true'] .icon {
+    transform: rotate(180deg);
+}
+
+button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 18px 22px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+    background-color: #f0f0f0;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button .icon {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+button .icon::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 12px;
+    background-color: currentColor;
+    content: '';
+    transform: translate(-50%, -50%);
+}
+
+button .icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 2px;
+    background-color: currentColor;
+    content: '';
+    transform: translate(-50%, -50%);
+}
+
+.accordion-content {
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Internship Details Page Styles */
+.internship-details {
+    
+    padding: 60px 0;
+    background-color: #f8fafa; /* Light off-white */
+}
+
+.internship-details .container {
+    margin-top: 10px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.internship-details h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #2e3138;
+}
+
+.internship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider boxes */
+    gap: 35px;
+}
+
+.internship-box {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.internship-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.internship-box h3 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.internship-box p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.internship-box ul {
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.internship-box .apply-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #008080; /* Teal */
+    color: #fff;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    
+}
+
+.internship-box .apply-button:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
+
+.internship-expanded-details {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 7px;
+    background-color: #f0f8ff; /* Light blue */
+}
+
+/*--------------------------------------------------------------------------------*/
+/*listing*/
+
+.listings {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.listings .container {
+    width: 90%;
+}
+
+.listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.listing-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.listing-box img{
+  width: 70%;
+  height: 70px;
+  border-radius: 100px;
+}
+
+.listing-box:hover {
+    transform: translateY(-5px);
+}
+
+.listing-box h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.listing-box p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.listing-box .view-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #008080; /* Teal */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.listing-box .view-button:hover {
+    background-color: #006666;
+}
+.internship-expanded-details h4 {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Internship Filter Section */
+.search-filters {
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .search-filters h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .filter-options select,
+  .filter-options input {
+    width: 220px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+  }
+  
+  .filter-options select:focus,
+  .filter-options input:focus {
+    border-color: #0066cc;
+    outline: none;
+  }
+  
+/*--------------------------------------------------------------------------------------*/
+/* Contact Section Styles */
+.contact {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: auto;
+    animation: slideInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.contact button {
+    padding: 12px 25px;
+    background-color: #008080; /* Teal */
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Footer Styles */
+footer {
+    background-color: #484c54; 
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 25px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #aaa;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links,
+    .auth-links {
+        width: 100%;
+    }
+
+    .nav-links ul,
+    .auth-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul li,
+    .auth-links ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+    }
+
+    .about-cards {
+        flex-direction: column;
+    }
+
+    .about-cards .card {
+        width: 100%;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer ul {
+        margin-top: 12px;
+        flex-direction: column;
+    }
+
+    footer ul li {
+        margin: 8px 0;
+    }
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Trending Internships Section Styles */
+.trending {
+    background-color: #fff;
+    padding: 40px 0;  /* Reduced padding */
+}
+
+.trending h2 {
+    text-align: center;
+    margin-bottom: 30px;  /* Reduced margin */
+    color: #2e3138;
+}
+
+.trending-grid {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 20px; /* Add space for scrollbar */
+    width: 90%;  /* Increase width */
+    margin: 0 auto;
+    gap: 15px; /* Reduced gap between boxes */
+}
+
+.trending-box {
+    background-color: #f0f8ff; /* Light blue */
+    padding: 20px; /* Reduced padding */
+    border-radius: 8px; /* Smaller border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 250px; /* Fixed width for the boxes */
+    min-width: 250px; /* Prevent boxes from shrinking */
+    flex: 0 0 auto; /* Do not grow or shrink, use auto for basis */
+}
+
+.trending-box:hover {
+    transform: translateY(-5px); /* Reduced hover effect */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); /* Reduced shadow on hover */
+}
+
+.trending-box h3 {
+    margin-bottom: 10px; /* Reduced margin */
+    color: #333;
+    font-size: 1.1em; /* Adjust heading font size if needed */
+}
+
+.trending-box p {
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 0.9em; /* Adjust paragraph font size if needed */
+}
+
+.trending-box .view-button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced button padding */
+    background-color: #008080; /* Teal */
+    color: #fff;
+    border-radius: 5px; /* Smaller border radius */
+    text-decoration: none;
+    font-size: 0.85em; /* Adjust button font size if needed */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.trending-box .view-button:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
+
+/* Modified auth-button Style */
+.auth-links ul li a.auth-button {
+    background-color: #4caf50; /* Example green color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.auth-links ul li a.auth-button:hover {
+    background-color: #388e3c;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Search Filters Section Styles */
+.search-filters {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center; /* Center the content */
+}
+
+.search-filters h2 {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    color: #2e3138;
+}
+
+.search-filters .filter-options {
+    justify-content: center; /* Center the filter options */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 20px; /* Spacing between filter items */
+    width: 80%; /* Limit the width to 80% of the container */
+    margin: 0 auto; /* Center the entire block */
+}
+
+.search-filters input[type="text"],
+.search-filters select {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 16px;
+    width: auto; /* Adjust width automatically based on content */
+    min-width: 200px;  /* Minimum width for the boxes */
+    max-width: 300px; /* Maximum width for the boxes */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Media Query for Responsive Search Filters */
+@media (max-width: 768px) {
+    .search-filters .filter-options {
+        flex-direction: column; /* Stack filter options on smaller screens */
+        align-items: stretch; /* Stretch items to fill the width */
+        width: 90%; /* Make the options take up more width on smaller screens */
+    }
+
+    .search-filters input[type="text"],
+    .search-filters select {
+        width: 100%; /* Make input and select elements take full width */
+        max-width: none; /* Remove maximum width */
+    }
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Login Page Styles */
+.login-page {
+    padding: 60px 0;
+    background-color: #f8fafa; /* Same background as other pages */
+}
+
+.login-page .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.login-page h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2e3138;
+}
+
+.login-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px; /* Spacing between form and information */
+}
+
+.login-form,
+.signup-form {
+    width: 350px;  /* or appropriate to your design */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.login-info {
+    width: 400px; /* Adjust for desired width */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h3,
+.signup-form h3,
+.login-info h3 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.login-info ul {
+    list-style: disc;
+    margin-left: 25px;
+}
+
+.login-info ul li {
+    margin-bottom: 12px;
+}
+
+.login-form input,
+.signup-form input {
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.login-form button,
+.signup-form button {
+    padding: 12px 25px;
+    background-color: #008080; /* Teal */
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.login-form button:hover,
+.signup-form button:hover {
+    background-color: #006666;
+}
+
+.login-form a,
+.signup-form a {
+    color: #008080;
+}
+
+.auth-links ul li a.signup-button {
+    background-color: #2196f3; /* Example blue color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.auth-links ul li a.signup-button:hover {
+    background-color: #1976d2;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Make login section and sign up section promently */
+.login-info {
+    width: 400px; /* Adjust for desired width */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+
+.signup-info {
+    width: 400px; /* Adjust for desired width */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+@media (max-width: 768px) {
+    .login-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-form,
+    .signup-form,
+    .login-info {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+.login-page {
+    padding: 60px 0;
+    background-color: #f8fafa; /* Same background as other pages */
+}
+
+.login-page .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.login-page h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2e3138;
+}
+
+.login-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Spacing between form and information */
+    align-items: center; /* Vertically center items */
+}
+
+.signup-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Spacing between form and information */
+    align-items: center; /* Vertically center items */
+}
+
+.login-form,
+.signup-form {
+    width: 350px;  /* or appropriate to your design */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.login-info,
+.signup-info {
+    width: 400px; /* Adjust for desired width */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+/* More Details Button Styles */
+.about-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #a2d4d0; /* Grey-Blue */
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.about-button:hover {
+    background-color: #455a64; /* Darker Grey-Blue */
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/*--------------------------------------------------------------------------------*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content input[type="number"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-content button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #45a049;
+}
+main.container {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+/*--------------------------------------------------------------------------------*/
+/*form*/
+
+  form input,
+  form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #444;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  nav .nav-links ul,
+  nav .auth-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  iframe {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .profile-box {
+  background-color: white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.profile-details p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+.edit-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-button:hover {
+  background-color: #555;
+}
+/*------------------------------------------------------------------------------------------*/
+/* profile */
+.profile-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .profile-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info p {
+    font-size: 17px;
+    margin: 8px 0;
+  }
+  
+  .edit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background-color: #555;
+  }
+  
+  /*--------------------------------------------------------------------------------*/
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+/*--------------------------------------------------------------------------------*/
+  /* Industry Section Styling */
+  .industry-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  
+  .industry-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2b6777;
+  }
+  
+  /* Internship Cards */
+  .internship-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .internship-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+  
+  .internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  
+  .internship-card h3 {
+    font-size: 1.3rem;
+    color: #1f456e;
+    margin-bottom: 10px;
+  }
+  
+  .internship-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .internship-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #52ab98;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .internship-card a:hover {
+    background-color: #407070;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .internship-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+/*--------------------------------------------------------------------------------*/
+ /* apply now*/
+ /* Popup Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .close-btn {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .apply-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .apply-btn:hover {
+    background-color: #0056b3;
+  }
+
+/*----------------------------------------------------------------------------------------*/
+/*apply padding and margin
+/* ✅ RESET & GLOBAL STRUCTURE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* ✅ STICKY HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* ✅ NAVIGATION BAR SPACING */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  /* ✅ PAGE CONTENT SPACING */
+  .container,
+  .about,
+  section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+  }
+  
+  /* ✅ STICKY FOOTER */
+  footer {
+    margin-top: auto;
+    background-color: #56716c;
+    padding: 15px 30px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+ 
+/*---------------------------------------------------------------------------------*/
+/* 🔽 Dropdown base style */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* Default dropdown background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* 🔁 Dropdown Links */
+  .dropdown-content a {
+    color: #fff; /* Default text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* 🎨 Hover effect when mouse moves over option */
+  .dropdown-content a:hover {
+    background-color: #074a3f; /* Change this to your hover color */
+    color: #ffffff; /* Text color on hover */
+  }
+  
+  /* ✅ LINK STYLE */
+  .nav-links ul,
+  .auth-links ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a,
+  .auth-links a {
+    text-decoration: none;
+    color: #040a0a;
+    font-weight: 500;
+  }
+  
+  /* ✅ LOGO */
+  .logo a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .logo span {
+    color: #0d3533;
+  }
+/*--------------------------*/
+
+  .modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+  }
+
+  .close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: red;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    color: red;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* api styling for internship cards*/
+  .internship-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .internship-card h3 {
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .internship-card a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  /*-------------------------------------------------------------------------*/
+  /*signup*/
+  
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #008080;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 0px;
+  }
+  
+  button:hover {
+    background: #055050;
+  }
+  
+  .google-login {
+    margin-top: 15px;
+  }
+  
+  #google-signup {
+    background: #db4437;
+  }
+  
+  #google-signup:hover {
+    background: #c23321;
+  }
+  
+  
+  
+  

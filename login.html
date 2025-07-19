@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+
+  <script>
+    // Replace with your Firebase project config
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "your-project-id.firebaseapp.com",
+      projectId: "your-project-id",
+      storageBucket: "your-project-id.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .google-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      margin-top: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .google-button img {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Internship<span>Hub</span></a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Internships</a>
+              <div class="dropdown-content">
+                <a href="it-software.html">IT & Software</a>
+                <a href="marketing.html">Marketing</a>
+                <a href="finance.html">Finance</a>
+                <a href="design.html">Design</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="medical.html">Medical</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Info</a>
+              <div class="dropdown-content">
+                <a href="how-it-works.html">How It Works</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </div>
+      <div class="auth-links">
+        <ul>
+          <li><a href="login.html" class="auth-button">Login</a></li>
+          <li><a href="signup.html" class="signup-button">Sign Up</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="login-page">
+    <div class="container">
+      <h2>Login</h2>
+      <div class="login-content">
+        <div class="login-form">
+          <h3>Login to Your Account</h3>
+          <form>
+            <input type="email" placeholder="Your Email">
+            <input type="password" placeholder="Your Password">
+            <button type="submit">Login</button>
+          </form>
+
+          <!-- Google Sign-in Button -->
+          <button class="google-button" id="googleLogin">
+            <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" />
+            Sign in with Google
+          </button>
+
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+          <p><a href="#">Forgot Password?</a></p>
+        </div>
+
+        <div class="login-info">
+          <h3>Why Login?</h3>
+          <ul>
+            <li><b>Personalized Dashboard:</b> Access your saved internships and applications.</li>
+            <li><b>Track Progress:</b> Stay updated on your application status.</li>
+            <li><b>Exclusive Recommendations:</b> Get internship suggestions tailored to your profile.</li>
+            <li><b>Secure Access:</b> Your information is safe and protected.</li>
+          </ul>
+          <p>Log in now to continue your internship search!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Fresher Internship Hub</p>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Google Login Logic -->
+  <script>
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    document.getElementById("googleLogin").addEventListener("click", function(e) {
+      e.preventDefault();
+      firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+          alert("Welcome, " + user.displayName);
+          window.location.href = "profile.html";
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

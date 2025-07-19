@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Opportunities</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Internship<span>Hub</span></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">Internships</a>
+                            <div class="dropdown-content">
+                                <a href="it-software.html">IT & Software</a>
+                                <a href="marketing.html">Marketing</a>
+                                <a href="finance.html">Finance</a>
+                                <a href="design.html">Design</a>
+                                <a href="teaching.html">Teaching</a>
+                                <a href="medical.html">Medical</a>
+                              </div>
+                        </div>
+                    </li>
+
+                    <!-- 🔽 Info Dropdown (How it Works + FAQ) -->
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">Info</a>
+                                <div class="dropdown-content">
+                                    <a href="how-it-works.html">How It Works</a>
+                            <a href="faq.html">FAQ</a>
+                                 </div>
+                        </div>
+                    </li>
+                    <li><a href="resume.html">Resume</a></li>
+
+                </ul>
+            </div>
+            <div class="auth-links">
+                <ul>
+                  <li><a href="login.html" class="auth-button">Login</a></li>
+                  <li><a href="signup.html" class="signup-button">Sign Up</a></li> 
+                  <li><a href="profile.html">Profile</a></li>
+                </ul>
+              </div>
+        </nav>
+    </header>
+
+    <section id="search-filters" class="search-filters">
+        <div class="container">
+          <h2> Match with Your Dream internship</h2>
+                <div class="filter-options">
+      
+            <input type="text" placeholder="Location" />
+       
+            <div class="filter-box">
+                <select id="industrySelect">
+                <option value="" disabled selected hidden>Select Field</option>
+                  
+                  <option value="it-software.html">Software Engineering</option>
+                  <option value="marketing.html">Marketing</option>
+                  <option value="finance.html">Finance</option>
+                  <option value="design.html">Design</option>
+                  <option value="teaching.html">Teaching</option>
+                  <option value="medical.html">Medical</option>
+                </select>
+              
+                <select id="durationSelect">
+                    <option value="" disabled selected hidden>Select Duration</option>
+                
+                  <option value="3">3 Months</option>
+                  <option value="6">6 Months</option>
+                  <option value="12">12 Months</option>
+                </select>  
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <section class="internship-details">
+        <div class="container">
+            <h2>Internship Opportunities</h2>
+             <div class="internship-details">
+            <h3>Software Development Internship Opportunities</h3>
+            <p>Explore exciting software development internships tailored for freshers! Gain hands-on experience and develop valuable skills in a real-world environment.</p>
+
+            <div class="internship-grid">
+                <div class="internship-box" data-internship="backend">
+                    <h3>Backend Developer Internship</h3>
+                    <p>Work on server-side logic, databases, and APIs for a cutting-edge web application.</p>
+                    <p>Work on server-side logic, databases, and APIs for a cutting-edge web application.</p>
+<p><strong>🕒 Duration:</strong> 3 to 6 Months</p>
+<ul>
+                        <li>Experience with Node.js, Python, or Java</li>
+                        <li>Database design and optimization</li>
+                        <li>API development and integration</li>
+                    </ul>
+                    <a href="javascript:void(0);" class="about-button"
+                    onclick="openAboutModal('Backend Developer Internship', 'As a backend intern, you’ll work on APIs, databases, and logic. Ideal for those with knowledge in Node.js, Java, or Python.')">
+                    More About</a>
+                 
+                   <button class="apply-button" onclick="openForm('backend')">Apply Now</button>
+                </div>
+
+                <div class="internship-box" data-internship="frontend">
+                    <h3>Frontend Developer Internship</h3>
+                    <p>Create user-friendly interfaces and interactive web experiences using modern frontend technologies.</p>
+                    <ul>
+                        <li>Proficiency in HTML, CSS, and JavaScript</li>
+                        <li>Experience with React, Angular, or Vue.js</li>
+                        <li>Responsive design and cross-browser compatibility</li>
+                        <p><strong>🕒 Duration:</strong> 3 to 6 Months</p>
+
+                    </ul>
+                    <a href="javascript:void(0);" class="about-button"
+                    onclick="openAboutModal(
+                      'Frontend Developer Internship',
+                      'As a Frontend Developer Intern, you will create responsive, interactive web interfaces using HTML, CSS, JavaScript, and frameworks like React or Vue.js. Ideal for creative coders who love building user experiences.')">
+                    More About
+                 </a>
+                 
+                   <button class="apply-button" onclick="openForm('frontend')">Apply Now</button>
+                </div>
+
+                <div class="internship-box" data-internship="mobile">
+                    <h3>Mobile App Developer Internship</h3>
+                    <p>Develop native mobile applications for iOS and Android platforms using industry-standard tools.</p>
+                    <ul>
+                        <li>Experience with Swift (iOS) or Kotlin (Android)</li>
+                        <li>Mobile UI/UX design principles</li>
+                        <li>App testing and deployment</li>
+                      
+                    </ul>
+                    <a href="javascript:void(0);" class="about-button"
+   onclick="openAboutModal(
+     'Mobile App Developer Internship',
+     'As a Mobile App Developer Intern, you will design and build user-friendly apps for Android and iOS platforms using technologies like Flutter, Swift, or Kotlin. Perfect for those passionate about mobile UI/UX and app development.')">
+   More About
+</a>
+
+                  <button class="apply-button" onclick="openForm('mobile')">Apply Now</button>
+                </div>
+                 <div class="internship-box" data-internship="qa">
+                    <h3>QA Tester Internship</h3>
+                    <p>Develop native mobile applications for iOS and Android platforms using industry-standard tools.</p>
+                    <ul>
+                        <li>Experience with Swift (iOS) or Kotlin (Android)</li>
+                        <li>Mobile UI/UX design principles</li>
+                        <li>App testing and deployment</li>
+                      </ul>
+                    <p><strong>🕒 Duration:</strong> 2 to 4 Months</p>
+                    <a href="javascript:void(0);" class="about-button"
+   onclick="openAboutModal(
+     'QA Tester Internship',
+     'As a QA Tester Intern, you will be responsible for testing web and mobile applications to ensure quality and functionality. Learn about bug tracking, test case creation, and automation tools. Ideal for detail-oriented problem solvers.')">
+   More About
+</a>
+
+                   <button class="apply-button" onclick="openForm('qa')">Apply Now</button>
+                </div>
+            </div>
+            <div class="internship-details">
+            <h3>Digital Marketing Internship Opportunities</h3>
+            <p>Explore exciting Digital marketing internships tailored for freshers! Gain hands-on experience and develop valuable skills in a real-world environment.</p>
+
+            <div class="internship-grid">
+                <div class="internship-box" data-internship="social">
+                    <h3>Social Media Manager Internship</h3>
+                    <p>Work on server-side logic, databases, and APIs for a cutting-edge web application.</p>
+                    <ul>
+                        <li>Experience with Node.js, Python, or Java</li>
+                        <li>Database design and optimization</li>
+                        <li>API development and integration</li>
+                     </ul>
+                    <p><strong>🕒 Duration:</strong> 1 to 3 Months</p>
+                    <a href="javascript:void(0);" class="about-button"
+   onclick="openAboutModal(
+     'Social Media Manager Internship',
+     'As a Social Media Manager Intern, you will plan, create, and manage content across various social media platforms. You’ll also engage with audiences, track performance, and help grow brand presence online. Perfect for creative and trend-savvy individuals.')">
+   More About</a>
+
+
+                     <button class="apply-button" onclick="openForm('social')">Apply Now</button>
+                </div>
+
+                <div class="internship-box" data-internship="search">
+                    <h3>Search Engine Optimization Internship</h3>
+                    <p>Create user-friendly interfaces and interactive web experiences using modern frontend technologies.</p>
+                    <ul>
+                        <li>Proficiency in HTML, CSS, and JavaScript</li>
+                        <li>Experience with React, Angular, or Vue.js</li>
+                        <li>Responsive design and cross-browser compatibility</li>
+                        <p><strong>🕒 Duration:</strong> 2 to 3 Months</p>
+                     </ul>
+                    <a href="javascript:void(0);" class="about-button"
+   onclick="openAboutModal(
+     'Search Engine Optimization Internship',
+     'As an SEO Intern, you will learn how to improve website visibility on search engines through keyword research, on-page optimization, link building, and performance analysis. Great for those interested in digital marketing and analytics.')">
+   More About</a>
+
+                 
+                   <button class="apply-button" onclick="openForm('search')">Apply Now</button>
+                </div>
+
+                <div class="internship-box" data-internship="content">
+                    <h3>Content Writer Internship</h3>
+                    <p>Develop native mobile applications for iOS and Android platforms using industry-standard tools.</p>
+                    <ul>
+                        <li>Experience with Swift (iOS) or Kotlin (Android)</li>
+                        <li>Mobile UI/UX design principles</li>
+                        <li>App testing and deployment</li>
+                    </ul>
+                    <p><strong>🕒 Duration:</strong> 1 to 2 Months</p>
+
+                    <a href="javascript:void(0);" class="about-button"
+                    onclick="openAboutModal(
+                      'Content Writer Internship',
+                      'As a Content Writer Intern, you will create high-quality, engaging written content for blogs, websites, and marketing campaigns. Perfect for those with strong grammar, research skills, and a flair for storytelling.')">
+                    More About</a>                 
+
+                    <button class="apply-button" onclick="openForm('content')">Apply Now</button>
+                </div>
+                 <div class="internship-box" data-internship="creator">
+                    <h3>Content Creator Internship</h3>
+                    <p>Work on server-side logic, databases, and APIs for a cutting-edge web application.</p>
+                    <ul>
+                        <li>Experience with Node.js, Python, or Java</li>
+                        <li>Database design and optimization</li>
+                        <li>API development and integration</li>
+                    </ul>
+                    <p><strong>🕒 Duration:</strong> 2 to 3 Months</p>
+                    <a href="javascript:void(0);" class="about-button"
+   onclick="openAboutModal(
+     'Content Creator Internship',
+     'As a Content Creator Intern, you will develop engaging digital content including videos, posts, and blogs for social platforms. Ideal for those passionate about storytelling, video editing, and creative writing.')">
+     More About</a>
+
+                 
+                   <button class="apply-button" onclick="openForm('creator')">Apply Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+  
+    <!-- The Modal form -->
+    <div id="applicationFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Internship Application</h2>
+            <form id="applicationForm">
+                <input type="hidden" id="internshipType" name="internshipType">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+              
+                <select name="method">
+                  <option value="" disabled selected hidden>method</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Free">Free of Cost</option>
+                </select>
+              
+                <button type="submit">Submit Application</button>
+              </form>
+              
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Fresher Internship Hub</p>
+            <ul>
+               <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("industrySelect").addEventListener("change", function() {
+          var selectedPage = this.value;
+          if (selectedPage) {
+            window.location.href = selectedPage;
+          }
+        });
+      </script>
+      
+      <!-- Popup Modal -->
+<div id="aboutModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeAboutModal()">&times;</span>
+      <h2 id="aboutTitle">Internship Title</h2>
+      <p id="aboutDescription">Detailed information about the internship will appear here.</p>
+    </div>
+  </div>
+
+  <!-- more about -->
+  <script>
+    // Function to open the "More About" modal
+    function openAboutModal(title, description) {
+      document.getElementById('aboutTitle').textContent = title;
+      document.getElementById('aboutDescription').textContent = description;
+      document.getElementById('aboutModal').style.display = 'block';
+    }
+  
+    // Function to close the modal
+    function closeAboutModal() {
+      document.getElementById('aboutModal').style.display = 'none';
+    }
+  
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('aboutModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    };
+</script>
+</body>
+</html>
